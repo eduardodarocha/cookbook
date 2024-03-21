@@ -4,7 +4,7 @@
       "previewLimit": 50,
       "driver": "SQLite",
       "name": "recipes",
-      "database": "\\\\wsl.localhost\\Ubuntu\\home\\eduardo\\code\\campus_code\\projetos_rails\\cookbook\\db\\development.sqlite3"
+      "database": "\\\\wsl.localhost\\Ubuntu\\home\\eduardo\\code\\campus_code\\projetos_rails\\cookbook\\storage\\development.sqlite3"
     }
   ],
   "sqltools.useNodeRuntime": true

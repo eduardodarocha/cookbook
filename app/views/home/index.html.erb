@@ -3,11 +3,11 @@
 <dl>
 <% @recipes.each do |recipe|%>
 <dt>
-<strong>Nome: </strong> <%recipe.name%>
+<strong>Nome: </strong> <%=recipe.name%>
 </dt>
 
 <dd>
-  <strong>Tipo da Recieta: </strong><%recipe.recipe_type%>
+  <strong>Tipo da Receita: </strong><%=recipe.recipe_type%>
   </dd>
 
 <% end %>
