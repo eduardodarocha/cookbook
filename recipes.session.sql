@@ -1,2 +1,2 @@
 
-SELECT * FROM recipe_types;
+SELECT * FROM recipes;

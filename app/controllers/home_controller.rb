@@ -8,7 +8,7 @@ class HomeController < ApplicationController
 
     # render plain: 'Página principal'
     # render template: 'index' # view/home/index.html.erb
-    @recipes = Recipe.all
+    @recipes = Recipe.all #(chama o model"Recipe" com o método 'all')
   end
   
   # def ola
