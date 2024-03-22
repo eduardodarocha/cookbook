@@ -1,26 +1,12 @@
 <h1>Livro de receitas</h1>
 
-<dl>
 <% @recipes.each do |recipe|%>
-<dt>
-<strong>Nome: </strong> <%=recipe.name%>
-</dt>
+<!-- <strong>Nome: </strong> <%=recipe.name%> <br /> -->
 
-<dd>
-  <strong>Tipo da Receita: </strong><%=recipe.recipe_type%>
-  </dd>
-<dd>
-  <strong>Culinária: </strong><%=recipe.cuisine%>
-  </dd>
-<dd>
-  <strong>Ingredientes: </strong><%=recipe.ingredients%>
-  </dd>
-<dd>
-  <strong>Modo de preparo: </strong><%=recipe.cook_method%>
-  </dd>
-<dd>
-  <strong>empo de preparo: </strong><%=recipe.cook_time%>
-  </dd>
+<%# Método usando tag '<a></a>' %>
+<!-- <a href='/receitas/<%= recipe.id%>'> <%=recipe.name%> </a><br /> -->
 
+<%# Método usando link_to %>
+<%= link_to recipe.name, recipe_path(recipe.id) %>
+<br />
 <% end %>
-</dl>
