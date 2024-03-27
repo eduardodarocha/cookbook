@@ -9,7 +9,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(name: params[:recipe][:name], 
-      recipe_type: params[:recipe][:recipe_type],
+      recipe_type_id: params[:recipe][:recipe_type_id],
       cuisine: params[:recipe][:cuisine],
       ingredients: params[:recipe][:ingredients],
       cook_method: params[:recipe][:cook_method],

@@ -13,4 +13,5 @@ Rails.application.routes.draw do
 
   # get 'receitas/:id', to: 'recipes#show', as: 'recipe'
   resources :recipes, only: [:show, :new, :create]
+  resources :recipe_types, only: [:new, :create]
 end
