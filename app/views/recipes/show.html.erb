@@ -21,5 +21,9 @@
 <dd>
   <strong>Tempo de preparo: </strong><%=@recipe.cook_time%>
   </dd>
-
+<dd>
+  <strong>Status: </strong><%=@recipe.status%>
+  </dd>
 </dl>
+
+<%= button_to 'Publicar', publish_recipe_path, {method: 'patch'} %>

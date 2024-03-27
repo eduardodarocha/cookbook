@@ -12,7 +12,9 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # get 'receitas/:id', to: 'recipes#show', as: 'recipe'
-  resources :recipes, only: [:show, :new, :create, :edit, :update]
+  resources :recipes, only: [:show, :new, :create, :edit, :update] do
+    patch :publish, on: :member 
+  end
   resources :recipe_types, only: [:new, :create]
   resources :cuisines, only: [:new, :create]
 end
