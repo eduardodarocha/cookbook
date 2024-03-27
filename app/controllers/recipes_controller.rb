@@ -10,7 +10,8 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(name: params[:recipe][:name], 
       recipe_type_id: params[:recipe][:recipe_type_id],
-      cuisine: params[:recipe][:cuisine],
+      # cuisine: params[:recipe][:cuisine],
+      cuisine_id: params[:recipe][:cuisine_id],
       ingredients: params[:recipe][:ingredients],
       cook_method: params[:recipe][:cook_method],
       cook_time: params[:recipe][:cook_time])
@@ -20,6 +21,26 @@ class RecipesController < ApplicationController
     end
 
     render :new
+  end
+
+  def edit
+    @recipe = Recipe.find(params[:id])
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+
+    if @recipe.update(name: params[:recipe][:name], 
+    recipe_type_id: params[:recipe][:recipe_type_id],
+    cuisine_id: params[:recipe][:cuisine_id],
+    ingredients: params[:recipe][:ingredients],
+    cook_method: params[:recipe][:cook_method],
+    cook_time: params[:recipe][:cook_time])
+
+      return redirect_to recipe_path(@recipe.id)
+    end
+
+    render :edit
   end
 
 end
