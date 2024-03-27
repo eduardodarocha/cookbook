@@ -48,5 +48,10 @@ class RecipesController < ApplicationController
     recipe.published!
     return redirect_to recipe_path(recipe.id)
   end
+  def draft
+    recipe = Recipe.find(params[:id])
+    recipe.draft!
+    return redirect_to recipe_path(recipe.id)
+  end
 
 end

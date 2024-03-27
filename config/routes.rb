@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   # get 'receitas/:id', to: 'recipes#show', as: 'recipe'
   resources :recipes, only: [:show, :new, :create, :edit, :update] do
-    patch :publish, on: :member 
+    patch :publish, on: :member
+    patch :draft, on: :member
   end
   resources :recipe_types, only: [:new, :create]
   resources :cuisines, only: [:new, :create]
